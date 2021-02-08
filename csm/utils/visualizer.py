@@ -5,7 +5,7 @@ import ntpath
 import time
 import visdom
 from . import visutil as util
-from make_html import HTML
+from .make_html import HTML
 import os.path as osp
 import pdb
 from . import visutil

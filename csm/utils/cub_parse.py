@@ -8,8 +8,8 @@ import scipy.linalg
 import scipy.io as sio
 import os
 import os.path as osp
-import cPickle as pickle
-import cPickle as pkl
+import _pickle as pickle
+import _pickle as pkl
 import torch
 from torch.autograd import Variable
 from . import transformations

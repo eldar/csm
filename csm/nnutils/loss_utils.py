@@ -30,7 +30,7 @@ flags.DEFINE_float('warmup_pose_iter', 0, 'Warm up iter for pose prediction')
 '''
 
 NC2_perm = list(itertools.permutations(range(8), 2))
-NC2_perm =  torch.LongTensor(zip(*NC2_perm)).cuda()
+NC2_perm = torch.LongTensor(list(zip(*NC2_perm))).cuda()
 
 def depth_loss_fn(depth_render, depth_pred, mask):
     loss = torch.nn.functional.relu(depth_pred-depth_render).pow(2) * mask
